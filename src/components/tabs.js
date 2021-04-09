@@ -32,6 +32,8 @@ const Tabs = (topics) => {
     jsTab.textContent = "javascript";
     bsTab.textContent = "bootstrap";
     techTab.textContent = "technology";
+  
+  Tabs.appendChild(createTabs);
   };
 }
 

@@ -38,6 +38,8 @@ const Card = (article) => {
    author.appendChild(imgContainer);
    author.appendChild(imgSource);
    author.appendChild(authorName);
+
+  Card.appendChild(createMarkup);
   };
 }
 
