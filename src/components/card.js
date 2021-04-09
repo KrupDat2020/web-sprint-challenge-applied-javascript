@@ -17,6 +17,28 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
+
+  function createMarkup() {
+    const newCard = document.createElement('div');
+    const headline = document.createElement('div');
+    const author = document.createElement('div');
+    const imgContainer = document.createElement('div');
+    const imgSource = document.createElement('img');
+   const authorName = document.createElement('span');
+
+   newCard.classList.add('card');
+   headline.classList.add('headline');
+   author.classList.add('author');
+   imgContainer.classList.add('img-container');
+   imgSource.classList.add('{authorPhoto}');
+   authorName.classList.add('{authorName}');
+
+   newCard.appendChild(headline);
+   newCard.appendChild(author);
+   author.appendChild(imgContainer);
+   author.appendChild(imgSource);
+   author.appendChild(authorName);
+  };
 }
 
 const cardAppender = (selector) => {
@@ -28,6 +50,8 @@ const cardAppender = (selector) => {
   // Create a card from each and every article object in the response, using the Card component.
   // Append each card to the element in the DOM that matches the selector passed to the function.
   //
+
+  cardAppender.appendChild(Card);
 }
 
 export { Card, cardAppender }
