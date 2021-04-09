@@ -11,33 +11,26 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
-function myHeader(title, date, temp) {
-  const headerDiv = document.createElement('div');
-  const dateSpan = document.createElement('class');
-  const h1Title = document.createElement('h1');
-  const tempSpan = document.createElement('class');
+  function createHeader({ title, date, temp }) {
+    const newHeader = document.createElement('div');
+    const dateSpan = document.createElement('span');
+    const h1Title = document.createElement('h1');
+    const tempSpan = document.createElement('span');
 
- headerDiv.classList.add('header');
- dateSpan.classList.add('date');
- h1Title.classList.add('title');
- tempSpan.classlist.add('temp');
+   newHeader.appendChild(dateSpan);
+   newHeader.appendChild(h1Title);
+   newHeader.appendChild(tempSpan);
 
- headerDiv.appendChild(dateSpan);
- headerDiv.appendChild(h1Title);
- headerDiv.appendChild(tempSpan);
+   newHeader.classList.add('header');
+   dateSpan.classList.add('date');
+   h1Title.classList.add('title');
+   tempSpan.classList.add('temp');
 
- dateSpan.textContent = date;
- h1Title.textContent = title;
- tempSpan.textContent = temp;
-
- console.log(myHeader)
- return myHeader;
-}
-
-
-
-
-
+   dateSpan.textContent = date;
+   h1Title.textContent = title;
+   tempSpan.textContent = temp;
+  };
+  return newHeader;
 }
 
 const headerAppender = (selector) => {
@@ -46,13 +39,10 @@ const headerAppender = (selector) => {
   // Implement this function taking a css selector as its only argument.
   // It should create a header using the Header component above, passing arguments of your choosing.
   // It should append the header to the element in the DOM that matches the given selector.
-  //
-  function myAppender(selector) {
-    const newHeaderAppender = document.querySelector('headerDiv');
-    const newDateSpan = document.querySelector('dateSpan');
-    const newH1Title = document.querySelector.apply('h1Title');
-    const newTempSpan = document.querySelector('tempSpan');
-  }
+  //');
+function createAppender () {
+
+}
 }
 
 export { Header, headerAppender }
