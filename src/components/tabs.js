@@ -13,6 +13,26 @@ const Tabs = (topics) => {
   //   <div class="tab">technology</div>
   // </div>
   //
+
+  function createTabs(topics) {
+    const addTopics = document.createElement('div');
+    const jsTab = document.createElement('div');
+    const bsTab = document.createElement('div');
+    const techTab = document.createElement('div');
+
+    addTopics.classList.add('topics');
+    jsTab.classList.add('tab');
+    bsTab.classList.add('tab');
+    techTab.classList.add('tab');
+
+    addTopics.appendChild(jsTab);
+    addTopics.appendChild(bsTab);
+    addTopics.appendChild(tectTab);
+
+    jsTab.textContent = "javascript";
+    bsTab.textContent = "bootstrap";
+    techTab.textContent = "technology";
+  };
 }
 
 const tabsAppender = (selector) => {
